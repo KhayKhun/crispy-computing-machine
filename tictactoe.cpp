@@ -45,10 +45,13 @@ int computerMoves(char board[]){
 
 int main(){
     srand(time(NULL));
+
     char board[9];
     fill(board, board + 9, '_');
+
     int count = 0;
     bool running = true;
+    
     draw(board);
     do{
         cout << "Insert a number from 1-9: " << endl;
@@ -73,7 +76,7 @@ int main(){
                 break;
             case 'N':
                 int pos = computerMoves(board);
-                cout << "pos " << pos << endl;
+                cout << "Computer chooses: " << pos + 1 << endl;
                 board[pos] = 'O';
                 draw(board);
 
